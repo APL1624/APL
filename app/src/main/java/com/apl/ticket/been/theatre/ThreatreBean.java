@@ -9,9 +9,8 @@ import java.util.List;
 public class ThreatreBean {
     private String retdesc;
     private List<TicketUnitListBean> ticketUnitList;
-
-    private CinemaBean cinema;
-    private List<MovieListBean>movieList;
+    private String msg;
+    private String firstDate;
 
     public String getRetdesc() {
         return retdesc;
@@ -21,13 +20,11 @@ public class ThreatreBean {
         return ticketUnitList;
     }
 
-
-
-   public CinemaBean getCinema() {
-        return cinema;
+    public String getMsg() {
+        return msg;
     }
 
-    public List<MovieListBean> getMovieList() {
-        return movieList;
+    public String getFirstDate() {
+        return firstDate;
     }
 }

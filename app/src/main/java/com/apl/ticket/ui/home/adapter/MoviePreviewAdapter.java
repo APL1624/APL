@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import com.apl.ticket.R;
 import com.apl.ticket.been.HomePageBeen;
 import com.apl.ticket.ui.selectseat.SelectSeat;
-import com.apl.ticket.ui.threatredetail.TheatreDetailActivity;
 import com.squareup.picasso.Picasso;
 import com.vittaw.mvplibrary.adapter.ListViewBaseAdapter;
 
@@ -29,17 +28,8 @@ public class MoviePreviewAdapter extends ListViewBaseAdapter<HomePageBeen.HPData
 
 
         View view = holder.findView(R.id.pre_head);
-        if (position==0||position==3){
+        if (position==0){
             view.setVisibility(View.VISIBLE);
-            if(position==3){
-                int sum=0;
-                for (int i = 0; i <data.size() ; i++) {
-                    if (data.get(position).getReleaseDate().substring(5, 7).equals(data.get(i).getReleaseDate().substring(5, 7))) {
-                        sum++;
-                    }
-                }
-                holder.setText(R.id.pre_head_text,data.get(position).getReleaseDate().substring(5,7)+"月上映 （"+sum+"）部");
-            }
         }
         else {
             if (TextUtils.equals(data.get(position).getReleaseDate().substring(5,7),data.get(position-1).getReleaseDate().substring(5,7))){
@@ -63,7 +53,7 @@ public class MoviePreviewAdapter extends ListViewBaseAdapter<HomePageBeen.HPData
         holder.setText(R.id.pre_item_highlight,data.get(position).getHighlight());
         holder.setText(R.id.pre_item_screenings,data.get(position).getScreenings());
         holder.setText(R.id.pre_item_buy_ticket,"查看影讯");
-        holder.setText(R.id.pre_item_grade,data.get(position).getGrade()+"分");
+        holder.setText(R.id.pre_item_grade,data.get(position).getNotifyCount());
         if (!data.get(position).getIsScheduleSupport().equals("0")) {
             holder.findView(R.id.pre_item_new_movie).setVisibility(View.VISIBLE);
         }
@@ -74,6 +64,6 @@ public class MoviePreviewAdapter extends ListViewBaseAdapter<HomePageBeen.HPData
 
     @Override
     public void onClick(View view) {
-        context.startActivity(new Intent(context, TheatreDetailActivity.class));
+//        context.startActivity(new Intent(context, TheatreDetailActivity.class));
     }
 }

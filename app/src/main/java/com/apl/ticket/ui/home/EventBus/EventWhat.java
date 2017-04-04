@@ -14,4 +14,8 @@ public class EventWhat {
 
     public static final int CINEMA_DISTRICT_ID = 130;
 
+    public static final int FOUND_CIRCLE_BOARD = 140;
+
+    public static final int CIRCLE_SORT = 150;
+
 }

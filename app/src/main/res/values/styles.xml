@@ -66,4 +66,21 @@
         <item name="android:background">@drawable/cinema_cover_series_selector</item>
     </style>
 
+    <style name="found_circle_detail_pop">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">15dp</item>
+        <!--<item name="android:layout_marginRight">15dp</item>-->
+        <item name="android:background">@drawable/found_circle_detail_pop_selector</item>
+    </style>
+
+    <style name="found_circle_item_content">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_gray_6</item>
+    </style>
+
 </resources>

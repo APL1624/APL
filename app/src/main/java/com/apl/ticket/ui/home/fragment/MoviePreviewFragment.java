@@ -2,7 +2,6 @@ package com.apl.ticket.ui.home.fragment;
 
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -98,8 +97,7 @@ public class MoviePreviewFragment extends BaseFragment<HomePageModel,HomePagePre
     @Override
     public void onScroll(AbsListView absListView, int i, int i1, int i2) {
         if (i!=0) {
-            if (i==3||!TextUtils.equals(mAdapter.getItem(i).getReleaseDate().substring(5,7),mAdapter.getItem(i-1).getReleaseDate().substring(5,7))
-                    ||!TextUtils.equals(mAdapter.getItem(i).getReleaseDate().substring(5,7),mAdapter.getItem(i+1).getReleaseDate().substring(5,7))) {
+            if (!TextUtils.equals(mAdapter.getItem(i).getReleaseDate().substring(5,7),mAdapter.getItem(i-1).getReleaseDate().substring(5,7))) {
                 int sum=0;
                 for (int j = 0; j<homePageBeen.getList().size() ; j++) {
                     if (mAdapter.getItem(i).getReleaseDate().substring(5, 7).equals(homePageBeen.getList().get(j).getReleaseDate().substring(5, 7))) {
@@ -107,7 +105,6 @@ public class MoviePreviewFragment extends BaseFragment<HomePageModel,HomePagePre
                     } else {
                     }
                 }
-
                 mHeadText.setText((mAdapter.getItem(i).getReleaseDate().substring(5,7)+"月上映 （"+sum+"）部"));
             }
         }else {

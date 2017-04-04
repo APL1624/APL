@@ -90,7 +90,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.threatredetail.TheatreDetailActivity"></activity>
+        <activity android:name=".ui.foundcircledetail.FoundCircleDetailActivity" />
+        <activity android:name=".ui.read.ReadActivity"></activity>
     </application>
 
 </manifest>

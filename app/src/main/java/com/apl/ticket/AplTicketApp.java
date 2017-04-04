@@ -7,16 +7,4 @@ import android.app.Application;
  */
 
 public class AplTicketApp extends Application {
-
-
-
-
-
-
-
-
-
-
-
-
 }

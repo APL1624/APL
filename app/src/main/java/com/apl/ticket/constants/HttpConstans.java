@@ -14,4 +14,6 @@ public class HttpConstans {
 
     public static final String MOVIE_DETAIL_COMMENT_HOST = "http://qz.dianying.163.com";
 
+    public static final String FOUND_CIRCLE = "http://qz.dianying.163.com";
+
 }

@@ -68,7 +68,7 @@
 
         <TextView
             android:id="@+id/pre_item_grade"
-            android:layout_width="40dp"
+            android:layout_width="30dp"
             android:layout_height="20dp"
             android:text="7.6分"
             android:textSize="12sp"

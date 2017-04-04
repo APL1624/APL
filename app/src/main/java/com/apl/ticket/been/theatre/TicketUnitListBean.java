@@ -12,8 +12,6 @@ public class TicketUnitListBean {
     private String isHaveTicket;
     private List<TicketListBean> ticketList;
 
-
-
     public String getShowDate() {
         return showDate;
     }

@@ -17,4 +17,12 @@ public class TimeUtil {
         return releaseTime.replace("-","/");
     }
 
+    /**
+     * 评论距今时间
+     * createTime: "2015-06-16 15:09:32"
+     */
+    public static String convertCreateTime(String createTime){
+        return "3天前";
+    }
+
 }

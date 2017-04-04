@@ -1,7 +1,11 @@
 package com.apl.ticket.api;
 
 import com.apl.ticket.been.CinemaClassifyBeen;
+import com.apl.ticket.been.FoundCircleBoardBeen;
+import com.apl.ticket.been.FoundCircleDetailPostBeen;
 import com.apl.ticket.been.FoundImageBeen;
+import com.apl.ticket.been.FoundReadBeen;
+import com.apl.ticket.been.FoundReadTabBeen;
 import com.apl.ticket.been.HomeDetailBeen;
 import com.apl.ticket.been.HomePageBeen;
 import com.apl.ticket.been.SplashBeen;
@@ -106,7 +110,38 @@ public interface ApiService {
      */
     @GET("/m/movie/getBannerList.html")
     Observable<FoundImageBeen> getFoundImageBeen(@QueryMap Map<String ,String> map);
-    @GET("/m/cinema/schedule.html")
+    @GET("/m/cinema/ticket.html")
     Observable<ThreatreBean> getThreatreBeen(@QueryMap Map<String ,String> map);
+
+    /**
+     * http://qz.dianying.163.com
+     * /circle_getBoardList
+     */
+    @GET("/circle_getBoardList")
+    Observable<FoundCircleBoardBeen> getFoundCircleBoardBeen();
+
+    /**
+     * http://qz.dianying.163.com
+     * /circle_getPosts
+     * ?sort=hot&boardId=14
+     */
+    @GET("/circle_getPosts")
+    Observable<FoundCircleDetailPostBeen> getFoundCircleDetailPostBeen(@Query("sort") String sort,@Query("boardId") String boardId,@Query("maxId") String maxId);
+
+
+    /**
+     * http://piao.163.com
+     * /m/movie/articleList.html
+     * ?recordPerPage=20&tagId=&apiVer=21&apilevel=17&currentPage=1&city=110000
+     */
+    @GET("/m/movie/articleList.html")
+    Observable<FoundReadBeen> getFoundReadBeen(@QueryMap Map<String ,String> map);
+
+    /**
+     * http://piao.163.com
+     * /m/movie/article_tags.html
+     */
+    @GET("/m/movie/article_tags.html")
+    Observable<FoundReadTabBeen> getFoundReadTabBeen();
 
 }

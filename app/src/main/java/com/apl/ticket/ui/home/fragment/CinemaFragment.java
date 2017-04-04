@@ -224,4 +224,5 @@ public class CinemaFragment extends BaseFragment<CinemaModel,CinemaPresenter> im
     }
 
 
+
 }
